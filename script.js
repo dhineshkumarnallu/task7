@@ -54,16 +54,26 @@
 // ountry which uses US Dollars as currency.
 
 
-// var request=new XMLHttpRequest();
-//  request.open("GET","https://restcountries.com/v3.1/all");
-//  request.send();
-//  request.onload = function(){
-//      var data=request.response;
-//      var result=JSON.parse(data);
-//      var res=result.filter((ele)=>ele.)
-//      var res1=res.map((ele)=>`${ele.continents} :${ele.name.common}`)
-//      console.log(res1)
-//  };
+var request=new XMLHttpRequest();
+ request.open("GET","https://restcountries.com/v3.1/all");
+ request.send();
+ request.onload = function(){
+     var data=request.response;
+     var result=JSON.parse(data);
+     var res=result.filter((ele)=>{(ele)
+     for(var key in ele.currencies){
+        if(ele.currencies[key].name=='United States dollar')
+        console.log(ele.name.common)
+       }
+    
+    }
+     )
+    
+  
+    console.log(res)
+ };
+
+
 
 
 
